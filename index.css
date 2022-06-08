@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@500;600;700;800&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --nav-color: #212335;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/* Nav */
+.main-nav {
+  background-color: var(--nav-color);
+  position: sticky;
+}
+
+.main-nav .nav-lst {
+  width: 25%;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .nav-lst .nav-item {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em;
+}
+.main-nav .nav-lst .nav-item:hover {
+  cursor: pointer;
+  background-color: #6a73d1;
+}
+/* Content */
+.content {
+  background-color: #fafafa;
+  flex-grow: 1;
+
+  display: flex;
+}
+.left {
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left .profile-pic {
+  flex-grow: 0;
+  width: 20em;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 3em;
+}
+.right .header {
+  color: var(--nav-color);
+  border-left: none;
+  max-width: 35%;
+  min-width: 7em;
+  display: inline-block;
+  font-size: 3em;
+}
+
+.right .description {
+  white-space: wrap;
+  font-size: 1.15em;
+}
+.right .description p {
+  line-height: 2em;
+}
+
+.label {
+  border-radius: 5px;
+  color: white;
+  padding: 3px 8px;
+  font-weight:600;
+}
+.label:hover {
+  cursor:pointer;
+  opacity: 0.75;
+}
+
+.email {
+  color: blue; 
+  text-decoration: underline;
+}
+.email:hover {
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+/* Footer */
+.footer {
+  height: 4em;
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.footer a {
+  color: white;
+}
+.footer
+.logos-wrapper {
+  /* border: 1px solid red; */
+  width: 10%;
+  display: flex;
+  margin: 1em 0;
+  gap: 1em;
+  justify-content: space-between;
+}
+.footer
+.logos-wrapper img {
+  width: 2em;
+}
+
+@media all and (max-width: 1200px) {
+  .left {
+    display: none;
+  }
+}
