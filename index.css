@@ -95,15 +95,6 @@ body {
   opacity: 0.75;
 }
 
-.email {
-  color: blue; 
-  text-decoration: underline;
-}
-.email:hover {
-  cursor: pointer;
-  filter: brightness(1.5);
-}
-
 /* Footer */
 .footer {
   height: 4em;
@@ -118,7 +109,6 @@ body {
 }
 .footer
 .logos-wrapper {
-  /* border: 1px solid red; */
   width: 10%;
   display: flex;
   margin: 1em 0;
@@ -128,6 +118,10 @@ body {
 .footer
 .logos-wrapper img {
   width: 2em;
+}
+.footer
+.logos-wrapper img:hover {
+  opacity: 0.8;
 }
 
 @media all and (max-width: 1200px) {
