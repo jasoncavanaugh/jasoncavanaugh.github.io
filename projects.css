@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  max-height: 100vh;
 }
 /* Nav */
 .main-nav {
@@ -33,7 +34,7 @@ body {
 }
 
 .main-nav .nav-lst .nav-item {
-  color: white;
+  color: #fafafa;
   font-size: 1.5em;
   font-weight: bold;
   padding: 0.5em;
@@ -52,54 +53,66 @@ body {
 .content {
   background-color: #fafafa;
   flex-grow: 1;
-
+  min-height: 0;
   display: flex;
-}
-.left {
-  min-width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.left .profile-pic {
-  flex-grow: 0;
-  width: 20em;
-}
-
-.right {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  gap: 1em;
-  margin: 0 3em;
+  /* border: 1px solid red; */
 }
-.right .header {
+/* Project List */
+.project-lst {
+  margin: 1em 2em;
+  min-height: 0;
+  flex-grow: 1;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.project-item {
+  background-color: #fafafa;
+  height: 9em;
+  margin: 1em 2em 1em 1em;
+  border: 1px solid var(--nav-color);
+  border-radius: 10px;
+  display: flex;
+  transition: transform 0.1s ease-in, filter 0.1s ease-in;
+}
+
+.project-item:hover {
+  transform: translateX(5px);
+  filter: drop-shadow(-5px 5px 3px #6a73d1);
+  border-color:#6a73d1;
+}
+.project-item:hover .project-title,
+.project-item:hover .project-description {
+  color: #6a73d1;
+}
+.project-item .left {
+  /* border: 1px solid green; */
+  display: flex;
+}
+.project-item .project-thumbnail {
+  border-radius: 10px 0 0 10px;
+  width: 15em;
+}
+.project-item:hover .project-thumbnail {
+  opacity: 0.9;
+}
+.project-item .right {
+  /* border: 1px solid green; */
+  flex-grow: 1;
+  padding-left: 1em;
+}
+.project-item .right hr {
   color: var(--nav-color);
-  border-left: none;
-  max-width: 35%;
-  min-width: 7em;
-  display: inline-block;
-  font-size: 3em;
+  max-width: 5em;
+  width: 5em;
+  align-self: flex-start;
+  
 }
 
-.right .description {
-  white-space: wrap;
-  font-size: 1.15em;
-}
-.right .description p {
-  line-height: 2em;
-}
-
-.label {
-  border-radius: 5px;
-  color: white;
-  padding: 3px 8px;
-  font-weight:600;
-}
-.label:hover {
-  cursor:pointer;
-  opacity: 0.75;
-}
 
 /* Footer */
 .footer {
@@ -130,8 +143,25 @@ body {
   opacity: 0.8;
 }
 
-@media all and (max-width: 1200px) {
-  .left {
-    display: none;
-  }
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
