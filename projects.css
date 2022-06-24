@@ -105,14 +105,6 @@ body {
   flex-grow: 1;
   padding-left: 1em;
 }
-.project-item .right hr {
-  color: var(--nav-color);
-  max-width: 5em;
-  width: 5em;
-  align-self: flex-start;
-  
-}
-
 
 /* Footer */
 .footer {
