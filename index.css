@@ -17,6 +17,11 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+
+span {
+  white-space: nowrap;
+}
+
 /* Nav */
 .main-nav {
   background-color: var(--nav-color);
@@ -46,9 +51,9 @@ body {
 .content {
   background-color: #fafafa;
   flex-grow: 1;
-
   display: flex;
 }
+
 .left {
   min-width: 30%;
   display: flex;
@@ -82,6 +87,7 @@ body {
 }
 .right .description p {
   line-height: 2em;
+  margin-right: 1em;
 }
 
 .label {
@@ -127,5 +133,8 @@ body {
 @media all and (max-width: 1200px) {
   .left {
     display: none;
+  }
+  .right { 
+    margin: 1.5rem;
   }
 }
